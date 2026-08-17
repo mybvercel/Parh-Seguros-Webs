@@ -1,0 +1,13 @@
+# Normaliza los finales de línea al guardar en el repo (LF) y los adapta al
+# checkout de cada sistema. Sin esto, clonar en Windows y en Mac/Linux produce
+# diffs falsos donde el archivo entero aparece como modificado.
+* text=auto eol=lf
+
+# Binarios: nunca tocar.
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.woff binary
+*.woff2 binary

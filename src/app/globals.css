@@ -1,26 +1,241 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* La detección automática de fuentes de Tailwind no estaba tomando
+   src/components/ui en el servidor de desarrollo, así que las utilidades
+   responsive de esos archivos faltaban solo en dev. Ver bitácora, hallazgo 6. */
+@source "../**/*.{ts,tsx}";
+
+/*
+  Sistema de diseño PARH.
+  Tokens definidos en directivas/04_DESIGN_SYSTEM.md.
+  Los azules y celestes salen del muestreo de píxeles del logo real.
+  El sitio es claro. No hay dark mode, por decisión del doc 04 seccion 8.2.
+*/
+
+@theme {
+  /* Azul PARH: identidad, fondos oscuros, titulares */
+  --color-parh-blue-950: #061436;
+  --color-parh-blue-900: #0b1f52;
+  --color-parh-blue-800: #12276b;
+  --color-parh-blue-700: #183080;
+  --color-parh-blue-600: #21419e;
+  --color-parh-blue-500: #2e56c4;
+
+  /* Celeste PARH: acento, iconos, detalles */
+  --color-parh-cyan-700: #00639b;
+  --color-parh-cyan-600: #0080c4;
+  --color-parh-cyan-500: #00a0e0;
+  --color-parh-cyan-400: #38bdf0;
+  --color-parh-cyan-300: #7fd4f7;
+  --color-parh-cyan-100: #d5eefb;
+  --color-parh-cyan-50: #edf7fd;
+
+  /* Neutrales */
+  --color-parh-ink: #0d1526;
+  --color-parh-slate-600: #475569;
+  --color-parh-slate-400: #94a3b8;
+  --color-parh-slate-200: #e2e8f0;
+  --color-parh-slate-100: #f1f5f9;
+  --color-parh-slate-50: #f8fafc;
+
+  /* Semánticos */
+  --color-parh-success: #0e9f6e;
+  --color-parh-warning: #d97706;
+  --color-parh-error: #dc2626;
+
+  /* Tipografía */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-inter-tight), var(--font-inter), ui-sans-serif, sans-serif;
+
+  /* Escala fluida. Ver doc 04 seccion 3.2 */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: clamp(1.0625rem, 1rem + 0.3vw, 1.125rem);
+  --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+  --text-3xl: clamp(1.875rem, 1.6rem + 1.4vw, 2.5rem);
+  --text-4xl: clamp(2.25rem, 1.8rem + 2.2vw, 3.5rem);
+  --text-5xl: clamp(2.75rem, 2rem + 3.5vw, 4.5rem);
+
+  /* Sombras azuladas, nunca negro puro */
+  --shadow-parh-sm: 0 1px 2px rgb(11 31 82 / 0.06);
+  --shadow-parh-md: 0 4px 12px rgb(11 31 82 / 0.08);
+  --shadow-parh-lg: 0 12px 32px rgb(11 31 82 / 0.1);
+  --shadow-parh-hover: 0 8px 24px rgb(11 31 82 / 0.12);
 }
 
+/* Puente hacia los tokens semánticos que consumen los componentes de shadcn */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: #ffffff;
+  --foreground: #0d1526;
+
+  --card: #ffffff;
+  --card-foreground: #0d1526;
+
+  --popover: #ffffff;
+  --popover-foreground: #0d1526;
+
+  /* Botón primario: azul del logo */
+  --primary: #183080;
+  --primary-foreground: #ffffff;
+
+  /* Botón secundario sobre blanco */
+  --secondary: #f8fafc;
+  --secondary-foreground: #183080;
+
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
+
+  --accent: #edf7fd;
+  --accent-foreground: #12276b;
+
+  --destructive: #dc2626;
+
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #00a0e0;
+
+  --radius: 1rem;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-pad: clamp(1rem, 0.5rem + 2vw, 2rem);
+  --section-y: clamp(3.5rem, 2rem + 6vw, 7rem);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply font-sans antialiased;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-size: var(--text-base);
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading text-parh-blue-900;
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  h2 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  h3 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Números tabulares en direcciones, teléfonos y métricas */
+  address,
+  time,
+  [data-numeric] {
+    font-variant-numeric: tabular-nums;
+    font-style: normal;
+  }
+
+  /* Foco visible en todo elemento interactivo. Doc 04 sección 10 */
+  :focus-visible {
+    outline: 2px solid var(--color-parh-cyan-500);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Doc 04 sección 7: sin movimiento si el sistema lo pide */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .container-parh {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--container-pad);
+  }
+
+  .section-parh {
+    padding-block: var(--section-y);
+  }
+
+  /* Medida de línea legible en bloques de texto. Doc 04 sección 3.3 */
+  .prose-parh {
+    max-width: 65ch;
+  }
+
+  /* Rótulo de sección. Único lugar del sitio donde se permite mayúsculas */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--color-parh-cyan-700);
+  }
 }
