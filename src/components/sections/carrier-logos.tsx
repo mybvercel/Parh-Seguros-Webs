@@ -21,7 +21,7 @@ export function CarrierLogos() {
     <section className="border-y border-parh-slate-200 bg-parh-slate-50 py-12">
       <div className="container-parh">
         <p className="text-center text-sm font-medium text-parh-slate-600">
-          Comparamos entre estas compañías y plataformas. Tocá una para cotizar.
+          Algunas de las compañías con las que trabajamos. Estas tienen cotizador online: tocá una para cotizar en el momento.
         </p>
 
         <ul className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">

@@ -106,6 +106,7 @@ export function Footer() {
               titulo="PARH"
               items={[
                 { href: "/nosotros/", label: "Quiénes somos" },
+                { href: "/asesores/", label: "Asesores" },
                 { href: "/cotizar/", label: "Cotizar" },
                 { href: "/diagnostico/", label: "Diagnóstico de cobertura" },
                 { href: "/contacto/", label: "Contacto" },

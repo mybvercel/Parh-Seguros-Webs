@@ -3,14 +3,13 @@ import type { Metrica } from "./types";
 /**
  * Franja de confianza. Doc 03 sección 4.3.
  *
- * REAL: los 20 años (declarados en parh.com.ar), las 4 oficinas y las
- * 6 compañías y plataformas (contadas de los links del sitio actual).
- *
- * INVENTADO: la cantidad de clientes asegurados. Es el único número que no
- * se puede derivar del sitio y necesita el dato de Roberto.
+ * Todos los números los confirmó el cliente (2026-08-12), así que dejan de
+ * ser placeholder. La cantidad de compañías pasó de 6 a 15: las 6 que estaban
+ * eran solo las que tienen cotizador online enlazado desde parh.com.ar, no
+ * el total con el que PARH opera.
  *
  * Regla del doc 04 sección 8.2: nada de contadores animados con números
- * redondos falsos. Si el dato real no llega, esta métrica se saca.
+ * redondos falsos. Estos son los que dio el cliente.
  */
 export const metricas: Metrica[] = [
   {
@@ -22,18 +21,18 @@ export const metricas: Metrica[] = [
   },
   {
     valor: 4,
-    label: "oficinas en el Oeste bonaerense",
+    label: "sucursales",
     origen: "real",
   },
   {
-    valor: 6,
-    label: "compañías y plataformas con las que operamos",
+    valor: 15,
+    label: "compañías con las que operamos",
     origen: "real",
   },
   {
-    valor: 3200,
+    valor: 10000,
     prefijo: "+",
     label: "clientes asegurados",
-    origen: "placeholder",
+    origen: "real",
   },
 ];

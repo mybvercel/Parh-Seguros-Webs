@@ -38,6 +38,8 @@ Mientras tanto se programa con placeholders del tamaño exacto.
 | `productos/responsabilidad-civil` | Pendiente | Obra o profesional en actividad |
 | `productos/integral-comercio` | Pendiente | Local comercial de barrio |
 | `productos/seguro-tecnico` | Pendiente | Maquinaria o equipo electrónico |
+| `productos/art` | Pendiente | Personal con equipo de protección en su puesto |
+| `productos/caucion` | Pendiente | Documento de garantía o firma de contrato |
 
 ### Hero (16:9, 1920x1080)
 

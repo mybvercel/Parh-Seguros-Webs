@@ -6,8 +6,10 @@ import {
   HeartPulse,
   House,
   PiggyBank,
+  FileCheck,
   Plane,
   Scale,
+  ShieldCheck,
   ShieldPlus,
   Smartphone,
   Store,
@@ -36,6 +38,8 @@ const ICONOS: Record<IconoKey, LucideIcon> = {
   briefcase: Briefcase,
   plane: Plane,
   smartphone: Smartphone,
+  "shield-check": ShieldCheck,
+  "file-check": FileCheck,
 };
 
 export function Icono({

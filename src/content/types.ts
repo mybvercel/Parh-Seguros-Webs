@@ -32,7 +32,9 @@ export type IconoKey =
   | "hard-hat"
   | "briefcase"
   | "plane"
-  | "smartphone";
+  | "smartphone"
+  | "shield-check"
+  | "file-check";
 
 /** Una cobertura, sea de personas o de empresas. */
 export interface Producto {
@@ -146,4 +148,34 @@ export interface MetaPagina {
   description: string;
   ogImage?: string;
   noindex?: boolean;
+}
+
+/** Rol dentro de la red de PARH. */
+export type RolAsesor = "pas" | "organizador";
+
+/**
+ * Productor Asesor de Seguros u Organizador de la red de PARH.
+ * Alimenta el directorio de /asesores/. Doc 03: el sitio actual no muestra
+ * a nadie del equipo, y en seguros la cara visible es el producto.
+ */
+export interface Asesor {
+  slug: string;
+  nombre: string;
+  rol: RolAsesor;
+  /** Número de matrícula de la Superintendencia de Seguros de la Nación. */
+  matriculaSSN: string | null;
+  /** Localidades donde atiende. Alimenta el filtro por zona. */
+  zonas: string[];
+  /** Slugs de producto en los que se especializa. Alimenta el filtro. */
+  especialidades: string[];
+  telefono: string | null;
+  telefonoE164: string | null;
+  email: string | null;
+  /** Ruta base de la foto, sin sufijo de ancho ni extensión. */
+  foto?: string;
+  /** Presentación breve, en primera persona del plural o tercera. */
+  bio: string;
+  /** Sucursal desde la que opera, si corresponde. */
+  oficina?: string;
+  origen: Origen;
 }

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { LeadForm } from "@/components/forms/lead-form";
 import { oficinas } from "@/content/oficinas";
 import { metadataDe, sitio } from "@/content/sitio";
-import { linkTelefono } from "@/lib/whatsapp";
+import { linkTelefono, linkWhatsapp } from "@/lib/whatsapp";
 import { textoHorario } from "@/lib/horarios";
 
 export const metadata: Metadata = metadataDe("/contacto/");
@@ -45,6 +45,28 @@ export default function ContactoPage() {
               <Mail className="size-4 text-parh-cyan-600" aria-hidden="true" />
               {sitio.email}
             </a>
+
+            {/* El bot es un canal aparte, no un reemplazo del asesor: responde
+                al instante y 24hs, pero el diferencial de PARH es que del otro
+                lado hay una persona (doc 01, cuello de botella 2). */}
+            <div className="mt-8 rounded-lg border border-parh-slate-200 bg-parh-cyan-50 p-5">
+              <p className="font-heading text-base font-semibold text-parh-blue-900">
+                ¿Consulta rápida y es tarde?
+              </p>
+              <p className="mt-1.5 text-sm text-parh-slate-600">
+                Nuestro asistente por WhatsApp responde al instante, las 24
+                horas. Si necesitás hablar con un asesor, te deriva.
+              </p>
+              <a
+                href={linkWhatsapp({ bot: true })}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-parh-blue-700 hover:underline"
+              >
+                <MessageCircle className="size-4" aria-hidden="true" />
+                <span data-numeric>{sitio.botTelefono}</span>
+              </a>
+            </div>
 
             <h2 className="mt-8 text-lg">Nuestras oficinas</h2>
             <ul className="mt-4 space-y-5">

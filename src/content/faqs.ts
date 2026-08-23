@@ -47,9 +47,9 @@ export const faqs: Faq[] = [
   {
     id: "zona-cobertura",
     scope: "general",
-    pregunta: "¿Atienden solo en el Oeste bonaerense?",
+    pregunta: "¿Atienden en todo el país?",
     respuesta:
-      "Tenemos oficinas en Morón, Marcos Paz, Mercedes y Luján, y ahí podés venir a hablar en persona. Pero las pólizas se pueden gestionar a distancia por WhatsApp o por mail, así que trabajamos con clientes de toda la provincia y del país.",
+      "Sí. Tenemos cuatro sucursales, en Morón, Marcos Paz, Mercedes y Luján, donde podés venir a hablar en persona. Pero la póliza se gestiona a distancia por WhatsApp o por mail sin ningún problema, así que trabajamos con clientes de todo el país.",
     origen: "placeholder",
   },
   {

@@ -13,16 +13,22 @@ export interface WhatsappOpts {
   contexto?: string;
   /** Mensaje completo, si se quiere reemplazar el armado automático. */
   mensaje?: string;
+  /**
+   * Abre el chat del bot en vez del número que atiende una persona.
+   * El bot responde al instante y las 24 horas; el asesor, en horario hábil.
+   */
+  bot?: boolean;
 }
 
-export function linkWhatsapp({ contexto, mensaje }: WhatsappOpts = {}): string {
+export function linkWhatsapp({ contexto, mensaje, bot }: WhatsappOpts = {}): string {
   const texto =
     mensaje ??
     (contexto
       ? `Hola PARH, quiero consultar por ${contexto}. Vengo de la web.`
       : "Hola PARH, quiero hacer una consulta. Vengo de la web.");
 
-  return `https://wa.me/${sitio.telefonoE164}?text=${encodeURIComponent(texto)}`;
+  const numero = bot ? sitio.botTelefonoE164 : sitio.telefonoE164;
+  return `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 }
 
 /** Link `tel:` en formato internacional. */

@@ -35,5 +35,6 @@ export const navOficinas: NavItem[] = oficinas.map((o) => ({
 export const navSimple: NavItem[] = [
   { href: "/cotizar/", label: "Cotizar" },
   { href: "/oficinas/", label: "Oficinas" },
+  { href: "/asesores/", label: "Asesores" },
   { href: "/nosotros/", label: "Nosotros" },
 ];

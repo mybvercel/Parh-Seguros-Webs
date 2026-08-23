@@ -117,6 +117,20 @@ export const heroPersonas: HeroCard[] = [
 
 export const heroEmpresas: HeroCard[] = [
   {
+    slug: "art",
+    nombre: "ART",
+    href: "/empresas/art/",
+    icono: "shield-check",
+    alt: "ART, aseguradora de riesgos del trabajo",
+  },
+  {
+    slug: "caucion",
+    nombre: "Caución",
+    href: "/empresas/caucion/",
+    icono: "file-check",
+    alt: "Seguro de caución para licitaciones y alquileres",
+  },
+  {
     slug: "responsabilidad-civil",
     nombre: "Responsabilidad Civil",
     href: "/empresas/responsabilidad-civil/",

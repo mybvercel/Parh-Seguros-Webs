@@ -29,7 +29,7 @@ export function Hero() {
     <section className="border-b border-parh-slate-200 bg-gradient-to-b from-parh-cyan-50 to-white">
       <div className="container-parh py-14 lg:py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="eyebrow">Bróker de seguros en el Oeste bonaerense</p>
+          <p className="eyebrow">Bróker de seguros</p>
 
           <h1 className="mt-3 text-4xl">
             {/* Split del copy verbatim (doc 03 sección 4.1) solo para el

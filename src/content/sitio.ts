@@ -17,6 +17,14 @@ export const sitio = {
   telefono: "11 2240 5022",
   telefonoE164: "5491122405022",
   whatsappDirecto: "https://wa.me/message/HQLGWMR2P4FDD1",
+  /**
+   * Bot de WhatsApp de PARH. Responde al instante y las 24 horas, a diferencia
+   * del número principal, que lo atiende una persona en horario hábil.
+   * Se ofrece como alternativa, nunca en reemplazo: el diferencial de PARH es
+   * justamente que del otro lado hay alguien (doc 01, cuello de botella 2).
+   */
+  botTelefono: "11 7246 1415",
+  botTelefonoE164: "5491172461415",
   redes: {
     instagram: "https://www.instagram.com/seguros_para_vos",
     facebook: "https://www.facebook.com/share/1BoVx73Hmi/",
@@ -28,8 +36,8 @@ export const sitio = {
 
 /** Copy verbatim de parh.com.ar. Doc 03 sección 4.2. No se reescribe. */
 export const copyHeredado = {
-  heroTitulo: "Atención Diferencial, Resultados Sorprendentes",
-  heroSubtitulo: "Queremos que recibas la atención que mereces",
+  heroTitulo: "Atención Diferente, Resultados Sorprendentes",
+  heroSubtitulo: "Hacemos que recibas la atención que mereces",
   cta: "Contactanos",
   sobreNosotros:
     "Con más de 20 años de trayectoria en el rubro, nuestra empresa se destaca por brindar soluciones confiables y eficientes a cada cliente. Nos enfocamos en la calidad del servicio y la seguridad, ofreciendo coberturas adaptadas a cada necesidad. Nuestra experiencia y compromiso nos convierten en la mejor elección para proteger lo que más valoras.",
@@ -72,7 +80,7 @@ export const copyNuevo = {
       "Comparamos entre varias compañías, no vendemos una sola.",
       "Cuatro oficinas donde podés venir a hablar con alguien.",
       "Te acompañamos en la gestión del siniestro, que es cuando el seguro realmente importa.",
-      "Más de 20 años haciendo esto en el Oeste bonaerense.",
+      "Más de 20 años haciendo esto, con oficinas propias y alcance en todo el país.",
     ],
   },
 } as const;
@@ -143,7 +151,7 @@ export const metadatos: MetaPagina[] = [
     ruta: "/empresas/",
     title: "Seguros para Empresas y Comercios | PARH Seguros",
     description:
-      "Responsabilidad civil, integral de comercio, seguro técnico y accidentes personales. Asesoramiento para PyMEs del Oeste bonaerense.",
+      "ART, caución, responsabilidad civil, integral de comercio y seguro técnico. Asesoramiento para PyMEs de todo el país.",
   },
   {
     ruta: "/empresas/responsabilidad-civil/",
@@ -168,6 +176,18 @@ export const metadatos: MetaPagina[] = [
     title: "Accidentes Personales para Empresas | PARH Seguros",
     description:
       "Cobertura para monotributistas, personal eventual y alumnos que no están alcanzados por una ART.",
+  },
+  {
+    ruta: "/empresas/art/",
+    title: "ART para tu Empresa | PARH Seguros",
+    description:
+      "Cobertura obligatoria para tu personal en relación de dependencia. Te ayudamos a elegir la ART que mejor responde el día del accidente.",
+  },
+  {
+    ruta: "/empresas/caucion/",
+    title: "Seguro de Caución | Garantías y Licitaciones | PARH",
+    description:
+      "La garantía que te piden para licitaciones, obras y alquileres, sin inmovilizar plata. Armamos la carpeta y la presentamos con vos.",
   },
   {
     ruta: "/cotizar/",
@@ -212,10 +232,16 @@ export const metadatos: MetaPagina[] = [
       "Oficina en Lavalle 416, Luján. Asesoramiento personal en seguros para tu familia o tu negocio.",
   },
   {
+    ruta: "/asesores/",
+    title: "Organizadores y Asesores | PARH Seguros",
+    description:
+      "Productores Asesores de Seguros que trabajan exclusivo con PARH. Buscá por zona y hablá directo con quien atiende la tuya.",
+  },
+  {
     ruta: "/nosotros/",
     title: "Quiénes Somos | PARH Bróker de Seguros",
     description:
-      "Más de 20 años asesorando en el Oeste bonaerense. Bróker independiente con 4 oficinas y acuerdos con varias compañías.",
+      "Más de 20 años asesorando. Bróker independiente con 4 sucursales y acuerdos con más de 15 compañías.",
   },
   {
     ruta: "/contacto/",
