@@ -14,8 +14,8 @@ export const sitio = {
   /** Definir www o sin www antes del deploy y ser consistente. Doc 03 sección 5.1. */
   url: "https://www.parh.com.ar",
   email: "info@parh.com.ar",
-  telefono: "11 2240 5022",
-  telefonoE164: "5491122405022",
+  telefono: "11 2244 5022",
+  telefonoE164: "5491122445022",
   whatsappDirecto: "https://wa.me/message/HQLGWMR2P4FDD1",
   /**
    * Bot de WhatsApp de PARH. Responde al instante y las 24 horas, a diferencia
@@ -217,7 +217,7 @@ export const metadatos: MetaPagina[] = [
     ruta: "/oficinas/marcos-paz/",
     title: "Bróker de Seguros en Marcos Paz | PARH",
     description:
-      "Oficina en Melgar 2035, Marcos Paz. Te asesoramos en persona sobre la cobertura que necesitás.",
+      "Oficina en Melgar 2034, Marcos Paz. Te asesoramos en persona sobre la cobertura que necesitás.",
   },
   {
     ruta: "/oficinas/mercedes/",
@@ -229,7 +229,7 @@ export const metadatos: MetaPagina[] = [
     ruta: "/oficinas/lujan/",
     title: "Bróker de Seguros en Luján | PARH",
     description:
-      "Oficina en Lavalle 416, Luján. Asesoramiento personal en seguros para tu familia o tu negocio.",
+      "Oficina en Av. Constitución 1612, Luján. Asesoramiento personal en seguros para tu familia o tu negocio.",
   },
   {
     ruta: "/asesores/",
@@ -247,7 +247,7 @@ export const metadatos: MetaPagina[] = [
     ruta: "/contacto/",
     title: "Contacto | PARH Bróker de Seguros",
     description:
-      "Escribinos por WhatsApp al 11 2240 5022 o dejanos tu consulta. Te respondemos el mismo día hábil.",
+      "Escribinos por WhatsApp al 11 2244 5022 o dejanos tu consulta. Te respondemos el mismo día hábil.",
   },
   {
     ruta: "/gracias/",
