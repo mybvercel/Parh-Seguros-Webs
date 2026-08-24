@@ -98,6 +98,11 @@ export const oficinas: Oficina[] = [
     telefonoE164: "5491122445022",
     email: "info@parh.com.ar",
     horarios: HORARIO_ESTANDAR,
+    // Geocodificado desde "Av. Constitución 1612, Luján" (OpenStreetMap,
+    // consulta libre y estructurada, mismo resultado en ambas). Sin verificar
+    // contra la ficha de Google Business Profile todavía: si el pin quedara
+    // corrido, se ajusta acá y el mapa, el "Cómo llegar" y el JSON-LD se
+    // corrigen solos, porque los tres se generan desde estas coordenadas.
     geo: { lat: -34.5669318, lng: -59.0960678 },
     imagen: "/img/oficinas/lujan",
     alt: "Frente de la oficina de PARH en Luján",
