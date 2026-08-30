@@ -15,7 +15,14 @@ import type { Producto } from "@/content/types";
 export function ProductCard({ producto, href }: { producto: Producto; href: string }) {
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-lg bg-white shadow-parh-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-parh-hover">
-      <Imagen base={producto.imagen} alt={producto.alt} aspect="4/3" />
+      <Imagen
+        base={producto.imagen}
+        alt={producto.alt}
+        aspect="4/3"
+        icono={producto.icono}
+        ajuste="contain"
+        className="bg-parh-cyan-50"
+      />
 
       <div className="flex flex-1 flex-col p-5">
         <h3 className="text-lg">

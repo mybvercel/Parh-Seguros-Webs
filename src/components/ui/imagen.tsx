@@ -1,21 +1,21 @@
-import { ImageOff } from "lucide-react";
-
-import { imagenLista, srcSet } from "@/lib/imagenes";
+import { Icono } from "@/components/ui/icono";
+import { anchoMayor, imagenLista, srcSet } from "@/lib/imagenes";
 import { cn } from "@/lib/utils";
+import type { IconoKey } from "@/content/types";
 
 /**
  * Imagen responsive con srcset real. Doc 03 sección 5.6 y doc 05 sección 6.
  *
  * Con `output: 'export'` no hay optimizador de Next en runtime: `next/image`
  * con `unoptimized` sirve un único archivo y no puede generar variantes de
- * ancho a partir de un solo `src`. Como sí generamos tres anchos reales con
+ * ancho a partir de un solo `src`. Como sí generamos anchos reales con
  * `scripts/optimize-images.mjs` (sharp), acá se arma un `<img>` con `srcSet`
  * nativo del navegador en lugar de forzarlo dentro de `next/image`.
  *
- * Doc 04 sección 9: las imágenes de producto las genera Roberto por IA y hoy
- * no existen. Mientras no estén en `IMAGENES_LISTAS`, se dibuja un marcador
- * con la proporción exacta y el nombre del archivo que falta, para que el
- * layout final ya quede correcto y el reemplazo no mueva nada.
+ * FALTA LA IMAGEN: en vez de un cartel de "imagen rota", se dibuja el ícono
+ * del producto sobre el celeste de la marca. Queda como una pieza gráfica
+ * intencional en lugar de un error, y el layout final ya es el definitivo:
+ * cuando llegue la foto, se reemplaza y no se mueve nada.
  */
 export function Imagen({
   base,
@@ -24,6 +24,8 @@ export function Imagen({
   priority = false,
   sizes = "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw",
   className,
+  icono,
+  ajuste = "cover",
 }: {
   base: string;
   alt: string;
@@ -31,6 +33,13 @@ export function Imagen({
   priority?: boolean;
   sizes?: string;
   className?: string;
+  /** Ícono de respaldo mientras no exista la foto. */
+  icono?: IconoKey;
+  /**
+   * `contain` para renders con fondo transparente, que recortados se ven mal.
+   * `cover` para fotos de escena, que sí conviene recortar.
+   */
+  ajuste?: "cover" | "contain";
 }) {
   const relacion = aspect.replace("/", " / ");
 
@@ -40,23 +49,26 @@ export function Imagen({
         role="img"
         aria-label={alt}
         className={cn(
-          "flex flex-col items-center justify-center gap-2 bg-parh-slate-100 text-parh-slate-400",
+          "flex items-center justify-center bg-parh-cyan-50",
           className,
         )}
         style={{ aspectRatio: relacion }}
       >
-        <ImageOff className="size-8" aria-hidden="true" />
-        <span className="px-4 text-center text-xs font-medium" data-numeric>
-          {base}.webp
-        </span>
+        {icono ? (
+          <Icono nombre={icono} className="size-12 text-parh-cyan-500/70" />
+        ) : (
+          <span className="font-heading text-2xl font-bold text-parh-cyan-500/50">
+            PARH
+          </span>
+        )}
       </div>
     );
   }
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element -- ver comentario de arriba
+    // eslint-disable-next-line @next/next/no-img-element
     <img
-      src={`${base}-1280.webp`}
+      src={`${base}-${anchoMayor(base)}.webp`}
       srcSet={srcSet(base)}
       sizes={sizes}
       alt={alt}
@@ -65,7 +77,11 @@ export function Imagen({
       loading={priority ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : "auto"}
       decoding="async"
-      className={cn("h-full w-full object-cover", className)}
+      className={cn(
+        "h-full w-full",
+        ajuste === "contain" ? "object-contain p-6" : "object-cover",
+        className,
+      )}
       style={{ aspectRatio: relacion }}
     />
   );

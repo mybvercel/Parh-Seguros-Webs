@@ -20,7 +20,7 @@ export const productosPersonas: Producto[] = [
     titulo: "Seguro automotor",
     bajada: "Coberturas para tu auto, camioneta, casa rodante, tráiler y más.",
     icono: "car",
-    imagen: "/img/productos/seguro-automotor",
+    imagen: "/img/hero/automotor",
     alt: "Auto estacionado frente a una casa en un barrio del Oeste bonaerense",
     introduccion:
       "El seguro de auto es obligatorio, pero no todas las pólizas cubren lo mismo. Te ayudamos a entender qué estás contratando y comparamos entre las compañías con las que trabajamos para que pagues por lo que realmente necesitás.",
@@ -58,7 +58,7 @@ export const productosPersonas: Producto[] = [
     titulo: "Seguro para moto",
     bajada: "Coberturas para tu moto adecuada a las necesidades del asegurado.",
     icono: "bike",
-    imagen: "/img/productos/seguro-motovehiculo",
+    imagen: "/img/hero/motovehiculo",
     alt: "Moto estacionada en una calle de barrio",
     introduccion:
       "La moto es el vehículo con más siniestralidad y el que más cuesta asegurar bien. Te armamos una cobertura que se ajuste al uso real que le das, sea para trabajar o para moverte todos los días.",
@@ -94,7 +94,7 @@ export const productosPersonas: Producto[] = [
     titulo: "Seguro de hogar",
     bajada: "Coberturas para proteger tu hogar y cuidar lo más importante.",
     icono: "house",
-    imagen: "/img/productos/seguro-hogar",
+    imagen: "/img/hero/hogar",
     alt: "Frente de una casa de barrio en el conurbano bonaerense",
     introduccion:
       "La mayoría de las pólizas de hogar se contratan con sumas aseguradas que quedaron viejas. Si el monto no acompañó la inflación, ante un siniestro cobrás una fracción de lo que perdiste. Revisamos tu caso y ajustamos la cobertura.",
@@ -132,7 +132,7 @@ export const productosPersonas: Producto[] = [
     titulo: "Seguro de vida",
     bajada: "Coberturas para proteger a aquellos que amas en momentos difíciles.",
     icono: "heart-pulse",
-    imagen: "/img/productos/seguro-vida",
+    imagen: "/img/hero/vida",
     alt: "Familia en el living de su casa",
     introduccion:
       "Un seguro de vida no es para vos, es para los que quedan. Sirve para que una familia no tenga que resolver un problema económico en el peor momento posible. Te explicamos las opciones sin vueltas.",
@@ -168,7 +168,7 @@ export const productosPersonas: Producto[] = [
     bajada:
       "Coberturas a la medida para llegar al retiro con tranquilidad y para armar proyectos personales.",
     icono: "piggy-bank",
-    imagen: "/img/productos/seguro-retiro",
+    imagen: "/img/hero/retiro",
     alt: "Pareja mayor caminando en un parque",
     introduccion:
       "Un seguro de retiro es un plan de ahorro de largo plazo con respaldo de una compañía de seguros. Sirve para complementar la jubilación o para juntar capital con un objetivo concreto.",
@@ -203,7 +203,7 @@ export const productosPersonas: Producto[] = [
     bajada:
       "Cobertura ante imprevistos que puedan causar lesiones, invalidez o fallecimiento debido a un accidente.",
     icono: "shield-plus",
-    imagen: "/img/productos/accidentes-personales",
+    imagen: "/img/hero/accidentes-personales",
     alt: "Persona trabajando en su oficio con equipo de protección",
     introduccion:
       "Esta cobertura protege a una persona ante imprevistos que puedan causar lesiones, invalidez o fallecimiento debido a un accidente. Es una opción clave para trabajadores independientes, deportistas y cualquier persona que quiera contar con respaldo financiero en caso de un evento inesperado.",

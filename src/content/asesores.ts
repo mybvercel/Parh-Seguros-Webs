@@ -37,6 +37,29 @@ export const asesores: Asesor[] = [
     origen: "placeholder",
   },
   {
+    slug: "dinamica-consultora",
+    nombre: "Dinámica Consultora",
+    rol: "organizador",
+    matriculaSSN: null,
+    // PENDIENTE: el cliente pasó "BARTOLOME MITRE 274 local 36" sin ciudad.
+    // Como el teléfono empieza en 387 (característica de Salta), lo más
+    // probable es que sea Salta capital, pero no se da por hecho: hasta
+    // confirmarlo, la zona queda sin localidad inventada.
+    zonas: ["A confirmar"],
+    especialidades: ["vida", "accidentes-personales", "art"],
+    // PENDIENTE: "387248231" tiene 9 dígitos y un número argentino necesita
+    // 10 (característica + abonado). Falta un dígito, así que no se arma el
+    // link `tel:`: un teléfono muerto en la web de un bróker es peor que no
+    // mostrar ninguno. Se completa cuando el cliente confirme el número.
+    telefono: null,
+    telefonoE164: null,
+    email: "dinamicaconsultoresdeseguros@gmail.com",
+    foto: "/img/asesores/dinamica-consultora",
+    tipoImagen: "logo",
+    bio: "Organización dedicada a protección y salud. Trabaja seguros de vida, accidentes personales y ART junto a PARH.",
+    origen: "placeholder",
+  },
+  {
     slug: "asesor-marcos-paz",
     nombre: "Nombre Apellido",
     rol: "pas",
@@ -92,6 +115,17 @@ export const asesores: Asesor[] = [
     origen: "placeholder",
   },
 ];
+
+/**
+ * Direcciones de los organizadores que tienen oficina propia.
+ * Se guardan aparte de `zonas` porque una es la dirección física y la otra
+ * es el área que atiende, y no siempre coinciden.
+ *
+ * PENDIENTE: falta la ciudad de Dinámica Consultora.
+ */
+export const direccionesAsesores: Record<string, string> = {
+  "dinamica-consultora": "Bartolomé Mitre 274, local 36",
+};
 
 export function getAsesor(slug: string): Asesor | undefined {
   return asesores.find((a) => a.slug === slug);

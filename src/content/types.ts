@@ -171,8 +171,14 @@ export interface Asesor {
   telefono: string | null;
   telefonoE164: string | null;
   email: string | null;
-  /** Ruta base de la foto, sin sufijo de ancho ni extensión. */
+  /** Ruta base de la foto o el logo, sin sufijo de ancho ni extensión. */
   foto?: string;
+  /**
+   * Un organizador suele ser una empresa, y su imagen es un logo, no un
+   * retrato. La tarjeta lo tiene que mostrar entero sobre fondo claro en vez
+   * de recortarlo en círculo, que le comería los bordes.
+   */
+  tipoImagen?: "foto" | "logo";
   /** Presentación breve, en primera persona del plural o tercera. */
   bio: string;
   /** Sucursal desde la que opera, si corresponde. */

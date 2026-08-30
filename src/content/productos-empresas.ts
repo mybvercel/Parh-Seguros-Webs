@@ -132,7 +132,7 @@ export const productosEmpresas: Producto[] = [
     titulo: "Accidentes personales para tu personal",
     bajada: "Cobertura para trabajadores y colaboradores que no poseen ART.",
     icono: "briefcase",
-    imagen: "/img/productos/accidentes-personales",
+    imagen: "/img/hero/accidentes-personales",
     alt: "Grupo de trabajadores con equipo de protección personal",
     introduccion:
       "Cubre a las personas que trabajan con vos y que no están alcanzadas por una ART. Es habitual en monotributistas contratados, colaboradores eventuales, alumnos de talleres y personal de eventos.",

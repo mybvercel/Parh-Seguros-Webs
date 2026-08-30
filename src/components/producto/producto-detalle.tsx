@@ -68,7 +68,9 @@ export function ProductoDetalle({ producto }: { producto: Producto }) {
           aspect="16/9"
           priority
           sizes="(min-width: 1024px) 960px, 100vw"
-          className="rounded-xl"
+          icono={producto.icono}
+          ajuste="contain"
+          className="rounded-xl bg-parh-cyan-50"
         />
       </div>
 
