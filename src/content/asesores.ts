@@ -47,12 +47,9 @@ export const asesores: Asesor[] = [
     // confirmarlo, la zona queda sin localidad inventada.
     zonas: ["A confirmar"],
     especialidades: ["vida", "accidentes-personales", "art"],
-    // PENDIENTE: "387248231" tiene 9 dígitos y un número argentino necesita
-    // 10 (característica + abonado). Falta un dígito, así que no se arma el
-    // link `tel:`: un teléfono muerto en la web de un bróker es peor que no
-    // mostrar ninguno. Se completa cuando el cliente confirme el número.
-    telefono: null,
-    telefonoE164: null,
+    // Número tal cual lo pasó el cliente, por pedido explícito.
+    telefono: "387248231",
+    telefonoE164: "54387248231",
     email: "dinamicaconsultoresdeseguros@gmail.com",
     foto: "/img/asesores/dinamica-consultora",
     tipoImagen: "logo",
