@@ -13,7 +13,7 @@ export default function NotFound() {
   return (
     <div className="container-parh section-parh">
       <p className="eyebrow">Error 404</p>
-      <h1 className="mt-3 text-3xl">No encontramos esta página</h1>
+      <h1 className="mt-3 text-center text-3xl">No encontramos esta página</h1>
       <p className="mt-3 max-w-prose text-lg text-parh-slate-600">
         Puede que el enlace esté viejo o que la dirección tenga un error. Te
         dejamos los accesos más buscados.

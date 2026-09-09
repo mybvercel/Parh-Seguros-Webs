@@ -16,9 +16,9 @@ export default function ContactoPage() {
     <>
       <Breadcrumbs migas={[{ label: "Contacto", href: "/contacto/" }]} />
 
-      <section className="container-parh pb-4">
-        <h1 className="max-w-2xl text-4xl">Contacto</h1>
-        <p className="mt-4 max-w-xl text-lg text-parh-slate-600">
+      <section className="container-parh pb-4 text-center">
+        <h1 className="text-4xl">Contacto</h1>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-parh-slate-600">
           Escribinos por WhatsApp al <span data-numeric>{sitio.telefono}</span>{" "}
           o dejanos tu consulta acá abajo. Te respondemos el mismo día hábil.
         </p>

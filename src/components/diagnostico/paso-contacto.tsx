@@ -41,7 +41,7 @@ export function PasoContacto({
       exit={{ opacity: 0, x: -24 }}
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
     >
-      <h2 className="text-2xl">{paso.titulo}</h2>
+      <h2 className="text-center text-2xl">{paso.titulo}</h2>
       {paso.ayuda ? (
         <p className="mt-1.5 text-sm text-parh-slate-600">{paso.ayuda}</p>
       ) : null}

@@ -8,9 +8,9 @@ export function HubOficinas() {
     <>
       <Breadcrumbs migas={[{ label: "Oficinas", href: "/oficinas/" }]} />
 
-      <section className="container-parh pb-4">
-        <h1 className="max-w-2xl text-4xl">Nuestras cuatro oficinas</h1>
-        <p className="mt-4 max-w-xl text-lg text-parh-slate-600">
+      <section className="container-parh pb-4 text-center">
+        <h1 className="text-4xl">Nuestras cuatro oficinas</h1>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-parh-slate-600">
           Morón, Marcos Paz, Mercedes y Luján. Cuatro oficinas donde podés
           venir a hablar con un asesor en persona.
         </p>

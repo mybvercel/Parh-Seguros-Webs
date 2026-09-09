@@ -35,13 +35,13 @@ export function Testimonials() {
   return (
     <section className="section-parh bg-white">
       <div className="container-parh">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="text-center sm:text-left">
             <p className="eyebrow">Lo que dicen nuestros clientes</p>
             <h2 className="mt-3 text-3xl">Atención con nombre y apellido</h2>
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex justify-center gap-2 sm:justify-start">
             <Button
               variant="outline"
               size="icon-lg"

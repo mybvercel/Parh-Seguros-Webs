@@ -23,18 +23,18 @@ export function ProductGrid() {
   return (
     <section className="section-parh bg-white">
       <div className="container-parh">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="eyebrow">Coberturas</p>
-            <h2 className="mt-3 text-3xl">
-              {segmento === "personas" ? "Seguros para vos y tu familia" : "Seguros para tu negocio"}
-            </h2>
-          </div>
+        <div className="text-center">
+          <p className="eyebrow">Coberturas</p>
+          <h2 className="mt-3 text-3xl">
+            {segmento === "personas" ? "Seguros para vos y tu familia" : "Seguros para tu negocio"}
+          </h2>
+        </div>
 
+        <div className="mt-6 flex justify-center">
           <div
             role="tablist"
             aria-label="Elegí qué querés proteger"
-            className="inline-flex gap-1 self-start rounded-lg bg-parh-slate-100 p-1"
+            className="inline-flex gap-1 rounded-lg bg-parh-slate-100 p-1"
           >
             {(["personas", "empresas"] as const).map((s) => (
               <button

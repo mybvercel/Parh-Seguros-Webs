@@ -33,7 +33,7 @@ export function OficinaDetalle({ oficina }: { oficina: Oficina }) {
           <p className="eyebrow">
             {oficina.esCasaCentral ? "Casa central" : "Sucursal"}
           </p>
-          <h1 className="mt-3 text-4xl">Bróker de seguros en {oficina.localidad}</h1>
+          <h1 className="mt-3 text-center text-4xl">Bróker de seguros en {oficina.localidad}</h1>
           <p className="mt-4 max-w-xl text-lg text-parh-slate-600">
             {oficina.descripcion}
           </p>
@@ -121,7 +121,7 @@ export function OficinaDetalle({ oficina }: { oficina: Oficina }) {
         </div>
 
         <div className="container-parh">
-          <h2 className="text-2xl">Zonas que atendemos desde acá</h2>
+          <h2 className="text-center text-2xl">Zonas que atendemos desde acá</h2>
           <ul className="mt-4 flex flex-wrap gap-2">
             {oficina.zonas.map((zona) => (
               <li

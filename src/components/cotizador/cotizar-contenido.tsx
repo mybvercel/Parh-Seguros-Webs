@@ -17,9 +17,9 @@ export function CotizarContenido() {
     <>
       <Breadcrumbs migas={[{ label: "Cotizar", href: "/cotizar/" }]} />
 
-      <section className="container-parh pb-4">
-        <h1 className="max-w-2xl text-4xl">Cotizá tu seguro online</h1>
-        <p className="mt-4 max-w-xl text-lg text-parh-slate-600">
+      <section className="container-parh pb-4 text-center">
+        <h1 className="text-4xl">Cotizá tu seguro online</h1>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-parh-slate-600">
           Elegí una compañía para cotizar directo, o dejanos tu WhatsApp y
           cotizamos nosotros por vos.
           {producto ? ` Consulta sobre: ${producto}.` : null}

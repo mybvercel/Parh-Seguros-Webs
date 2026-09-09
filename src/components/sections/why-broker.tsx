@@ -12,10 +12,10 @@ export function WhyBroker() {
   return (
     <section className="section-parh bg-parh-blue-900">
       <div className="container-parh grid gap-10 lg:grid-cols-2 lg:items-center">
-        <div>
+        <div className="text-center lg:text-left">
           <p className="eyebrow text-parh-cyan-300">Por qué un bróker</p>
           <h2 className="mt-3 text-3xl text-white">{titulo}</h2>
-          <p className="mt-4 max-w-lg text-lg text-parh-cyan-100">{bajada}</p>
+          <p className="mx-auto mt-4 max-w-lg text-lg text-parh-cyan-100 lg:mx-0">{bajada}</p>
         </div>
 
         <ul className="space-y-4">

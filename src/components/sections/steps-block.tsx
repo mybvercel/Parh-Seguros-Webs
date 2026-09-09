@@ -9,7 +9,7 @@ export function StepsBlock() {
   return (
     <section className="section-parh bg-parh-slate-50">
       <div className="container-parh">
-        <div className="max-w-2xl">
+        <div className="text-center">
           <p className="eyebrow">Cómo trabajamos</p>
           <h2 className="mt-3 text-3xl">Tres pasos, sin vueltas</h2>
         </div>

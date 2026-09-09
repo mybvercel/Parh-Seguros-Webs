@@ -13,9 +13,9 @@ export default function AsesoresPage() {
     <>
       <Breadcrumbs migas={[{ label: "Asesores", href: "/asesores/" }]} />
 
-      <section className="container-parh pb-4">
-        <h1 className="max-w-2xl text-4xl">Nuestros asesores</h1>
-        <p className="mt-4 max-w-xl text-lg text-parh-slate-600">
+      <section className="container-parh pb-4 text-center">
+        <h1 className="text-4xl">Nuestros asesores</h1>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-parh-slate-600">
           Organizadores y Productores Asesores de Seguros que trabajan de forma
           exclusiva con PARH. Buscá por zona y hablá directo con quien atiende
           la tuya.
@@ -27,7 +27,7 @@ export default function AsesoresPage() {
           <DirectorioAsesores />
 
           <div className="mt-10 rounded-xl bg-parh-cyan-50 p-8 text-center sm:p-10">
-            <h2 className="text-2xl text-parh-blue-900">
+            <h2 className="text-center text-2xl text-parh-blue-900">
               ¿Sos productor y querés sumarte a la red?
             </h2>
             <p className="mx-auto mt-2 max-w-md text-parh-slate-600">

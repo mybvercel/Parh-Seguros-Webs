@@ -52,7 +52,7 @@ export function ProductoDetalle({ producto }: { producto: Producto }) {
               {producto.segmento === "personas" ? "Seguros para personas" : "Seguros para empresas"}
             </p>
           </div>
-          <h1 className="mt-3 text-4xl">{producto.titulo}</h1>
+          <h1 className="mt-3 text-center text-4xl">{producto.titulo}</h1>
           <p className="mt-4 max-w-xl text-lg text-parh-slate-600">
             {producto.introduccion}
           </p>

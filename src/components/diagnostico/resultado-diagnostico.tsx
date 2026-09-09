@@ -28,8 +28,8 @@ export function ResultadoDiagnostico({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
     >
-      <p className="eyebrow">Tu diagnóstico</p>
-      <h2 className="mt-3 text-3xl">
+      <p className="eyebrow text-center">Tu diagnóstico</p>
+      <h2 className="mt-3 text-center text-3xl">
         {nombre ? `${nombre}, esto` : "Esto"} es lo que encontramos
       </h2>
       <p className="mt-2 text-parh-slate-600">

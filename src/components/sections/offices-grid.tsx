@@ -9,12 +9,18 @@ export function OfficesGrid() {
   return (
     <section className="section-parh bg-parh-slate-50">
       <div className="container-parh">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="eyebrow">Dónde estamos</p>
-            <h2 className="mt-3 text-3xl">Nuestras cuatro oficinas</h2>
-          </div>
+        <div className="text-center">
+          <p className="eyebrow">Dónde estamos</p>
+          <h2 className="mt-3 text-3xl">Nuestras cuatro oficinas</h2>
+        </div>
 
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {oficinas.map((o) => (
+            <OfficeCard key={o.slug} oficina={o} />
+          ))}
+        </div>
+
+        <div className="mt-6 text-center">
           <Link
             href="/oficinas/"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-parh-blue-700 hover:underline"
@@ -22,12 +28,6 @@ export function OfficesGrid() {
             Ver todas las oficinas
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
-        </div>
-
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {oficinas.map((o) => (
-            <OfficeCard key={o.slug} oficina={o} />
-          ))}
         </div>
       </div>
     </section>

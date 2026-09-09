@@ -27,8 +27,8 @@ export function FaqSection({
     <section className="section-parh bg-parh-slate-50">
       <JsonLd data={faqPage(items)} />
       <div className="container-parh max-w-3xl">
-        <p className="eyebrow">{eyebrow}</p>
-        <h2 className="mt-3 text-3xl">{titulo}</h2>
+        <p className="eyebrow text-center">{eyebrow}</p>
+        <h2 className="mt-3 text-center text-3xl">{titulo}</h2>
 
         <Accordion type="single" collapsible className="mt-8 w-full">
           {items.map((f) => (

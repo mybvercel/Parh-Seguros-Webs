@@ -14,7 +14,7 @@ export function QueResolver() {
 
   return (
     <div>
-      <h2 className="text-2xl">Qué podés resolver acá</h2>
+      <h2 className="text-center text-2xl">Qué podés resolver acá</h2>
       <p className="mt-2 text-parh-slate-600">
         Todas nuestras oficinas atienden el mismo catálogo completo, para
         personas y para empresas.

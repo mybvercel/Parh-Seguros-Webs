@@ -19,7 +19,7 @@ export function DiagnosticoTeaser() {
 
           <div>
             <p className="eyebrow">Gratis, en 90 segundos</p>
-            <h2 className="mt-3 text-3xl">
+            <h2 className="mt-3 text-center text-3xl">
               ¿Sabés si tu cobertura actual tiene algo sin cubrir?
             </h2>
             <p className="mt-3 max-w-xl text-parh-slate-600">

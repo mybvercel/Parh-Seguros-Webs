@@ -23,9 +23,9 @@ export function HubProductos({
     <>
       <Breadcrumbs migas={[{ label: migaLabel, href: `${rutaBase}/` }]} />
 
-      <section className="container-parh pb-4">
-        <h1 className="max-w-2xl text-4xl">{titulo}</h1>
-        <p className="mt-4 max-w-xl text-lg text-parh-slate-600">{bajada}</p>
+      <section className="container-parh pb-4 text-center">
+        <h1 className="text-4xl">{titulo}</h1>
+        <p className="mx-auto mt-4 max-w-xl text-lg text-parh-slate-600">{bajada}</p>
       </section>
 
       <section className="section-parh">
@@ -37,7 +37,7 @@ export function HubProductos({
           </div>
 
           <div className="mt-10 rounded-xl bg-parh-cyan-50 p-8 text-center sm:p-10">
-            <h2 className="text-2xl text-parh-blue-900">¿No sabés cuál necesitás?</h2>
+            <h2 className="text-center text-2xl text-parh-blue-900">¿No sabés cuál necesitás?</h2>
             <p className="mx-auto mt-2 max-w-md text-parh-slate-600">
               Respondé 6 preguntas y te decimos qué riesgos podrían estar sin
               cubrir en lo que ya tenés.

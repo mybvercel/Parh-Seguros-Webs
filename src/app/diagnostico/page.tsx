@@ -11,7 +11,7 @@ export default function DiagnosticoPage() {
     <>
       <Breadcrumbs migas={[{ label: "Diagnóstico", href: "/diagnostico/" }]} />
 
-      <section className="container-parh section-parh max-w-xl">
+      <section className="container-parh section-parh max-w-xl text-center">
         <p className="eyebrow">Gratis, en 90 segundos</p>
         <h1 className="mt-3 text-3xl">Diagnóstico de cobertura</h1>
         <p className="mt-2 text-parh-slate-600">
