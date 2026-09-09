@@ -57,6 +57,36 @@ export const asesores: Asesor[] = [
     origen: "placeholder",
   },
   {
+    slug: "iramicel-fortoul",
+    nombre: "Iramicel Fortoul",
+    rol: "organizador",
+    matriculaSSN: null,
+    zonas: ["Moreno", "Pilar"],
+    especialidades: ["automotor", "hogar", "vida", "accidentes-personales"],
+    telefono: "11 3293 1786",
+    telefonoE164: "5491132931786",
+    email: null,
+    foto: "/img/asesores/iramicel-fortoul",
+    tipoImagen: "foto",
+    bio: "Organizadora en el corredor Moreno-Pilar. Atiende con agenda propia en dos puntos de la zona norte del Conurbano. Segundo contacto: 11 5708 7243.",
+    origen: "real",
+  },
+  {
+    slug: "emmanuel-brigante",
+    nombre: "Emmanuel Brigante",
+    rol: "organizador",
+    matriculaSSN: null,
+    zonas: ["Zona Norte", "Gran Buenos Aires"],
+    especialidades: ["automotor", "integral-de-comercio", "responsabilidad-civil"],
+    telefono: "11 2566 1551",
+    telefonoE164: "5491125661551",
+    email: "estudiobrigante.ch@gmail.com",
+    foto: "/img/asesores/emmanuel-brigante",
+    tipoImagen: "foto",
+    bio: "Organizador con canal exclusivo de atención para Productores Asesores de Seguros. Web: estudiobrigante.com.ar",
+    origen: "real",
+  },
+  {
     slug: "asesor-marcos-paz",
     nombre: "Nombre Apellido",
     rol: "pas",
@@ -122,6 +152,7 @@ export const asesores: Asesor[] = [
  */
 export const direccionesAsesores: Record<string, string> = {
   "dinamica-consultora": "Bartolomé Mitre 274, local 36",
+  "iramicel-fortoul": "Av. Libertador 2798, Moreno CP 1744 / Maipú 1360, Pilar CP 1629",
 };
 
 export function getAsesor(slug: string): Asesor | undefined {

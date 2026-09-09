@@ -52,7 +52,7 @@ function PanelProductos({
                   <span className="block text-sm font-semibold text-parh-blue-900">
                     {item.label}
                   </span>
-                  <span className="mt-0.5 block text-xs leading-snug text-parh-slate-600">
+                  <span className="mt-0.5 block text-xs leading-snug text-parh-slate-600 line-clamp-2">
                     {item.descripcion}
                   </span>
                 </span>
@@ -124,7 +124,7 @@ export function Header() {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>Personas</NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent className="max-h-[calc(100dvh-5.5rem)] overflow-y-auto">
                 <PanelProductos
                   items={navPersonas}
                   hubHref="/seguros/"
@@ -135,7 +135,7 @@ export function Header() {
 
             <NavigationMenuItem>
               <NavigationMenuTrigger>Empresas</NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent className="max-h-[calc(100dvh-5.5rem)] overflow-y-auto">
                 <PanelProductos
                   items={navEmpresas}
                   hubHref="/empresas/"
